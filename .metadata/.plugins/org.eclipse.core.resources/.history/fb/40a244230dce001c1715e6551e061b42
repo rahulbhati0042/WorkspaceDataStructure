@@ -1,0 +1,36 @@
+package com.arrayproblems;
+
+public class IncreasingDecreasing {
+
+	public static void main(String[] args) {
+		int arr[] = { 8, 7, 6, 5, 4, 3, 2, 1 };
+
+		int flag_in = 0;
+		int flag_de = 0;
+		boolean flag_in_de = false;
+		for (int i = 0; i < arr.length - 1; i++) {
+
+			if (arr[i] < arr[i + 1]) {
+				flag_in++;
+				if (i == 0)
+					flag_in_de = true;
+			} else if (arr[i] > arr[i + 1]) {
+				flag_de++;
+				if (i == 0)
+					flag_in_de = false;
+			}
+		}
+
+		if (flag_in > 0 && flag_de == 0) {
+			System.out.println("Only Increasing");
+		} else if (flag_de > 0 && flag_in == 0) {
+			System.out.println("Only Decreasing");
+		} else if (flag_in_de) {
+			System.out.println("Increasing then Decreasing");
+		} else if (!flag_in_de) {
+			System.out.println("Decreasing then Increasing  ");
+		}
+
+	}
+
+}

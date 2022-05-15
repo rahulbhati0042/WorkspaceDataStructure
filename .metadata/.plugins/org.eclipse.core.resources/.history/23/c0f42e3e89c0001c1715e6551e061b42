@@ -1,0 +1,16 @@
+package com.arrayproblems;
+
+public class FirstLargestNumber {
+	public static void main(String[] args) {
+		int a[]={45,43,75,51,66,29,90};
+		for(int i=1;i<a.length;i++){
+			if(a[0]<a[i]){
+				int tmp= a[0];
+				a[0]= a[i];
+				a[i]=tmp;
+				
+			}
+		}
+		System.out.println("Largest Number: "+a[0]);
+	}
+}

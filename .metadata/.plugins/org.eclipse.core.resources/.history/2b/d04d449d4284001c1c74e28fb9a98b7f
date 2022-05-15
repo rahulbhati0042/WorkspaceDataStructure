@@ -1,0 +1,63 @@
+package com.mergesort;
+
+public class MergeSort {
+	public static void main(String[] args) {
+		int arr[] = { 9, 4, 7, 6, 3, 1, 5, 8, 10 };
+
+		int top1 = 10; // stack-1
+		int top2 = 10; // stack -2
+		
+		//push lowerbund and upperbound on stack1
+		top1--;
+		
+		int[][] stack1=new int[10][10];
+		int[][] stack2=new int[10][10];
+
+		
+		stack1[top1][0]=0;
+		stack1[top1][1]=9;
+		while(top1!=10) //stack-1 should not be empty
+		{
+			//pop from stack 1 into a,b
+			int a = stack1[top1][0];
+			int b = stack1[top1][1];
+			top1++;
+			// push a,b on stack 2
+			top2--;
+			stack2[top2][0]=a;
+			stack2[top2][1]=b;
+			//calculate mid
+			int mid = (a+b)/2;
+			if(a<mid) // push on stack1
+			{
+				top1--;
+				stack1[top1][0]=a;
+				stack1[top1][1]=mid;
+				
+			}
+			if(mid+1<b) // push on stack1
+			{
+				top1--;
+				stack1[top1][0]=mid+1;
+				stack1[top1][1]=b;
+			}
+			
+			
+		}
+		int lb1;
+		int ub1;
+		int lb2,ub2;
+		int lb3=0;
+		int ub3=9;
+		
+		while(top1!=10)// stack 2 should not empty
+		{
+			lb1 = stack2[top2][0];
+			ub2 = stack2[top2][1];
+			top2++;
+			i1 = ub1+1;
+			i2=lb
+			
+		}
+	}
+}

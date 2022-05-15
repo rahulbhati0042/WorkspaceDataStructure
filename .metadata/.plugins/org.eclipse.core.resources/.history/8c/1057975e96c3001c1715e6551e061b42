@@ -1,0 +1,31 @@
+package com.arrayproblems;
+
+public class FirstAndLastOccurrenceForAllItems {
+	public static void main(String[] args) {
+		// int arr[]= {2,3,4,5,5,6,7,7,7,9,11};
+		// int arr[]= {5,6,6,6,7,8,8,10};
+		int arr[] = { 2, 3, 4, 5, 5, 7, 7, 7, 9, 11 };
+		for (int i = 0; i < arr.length; i++) {
+			int f_Ocurrence = i;
+			int l_Ocurrence = i;
+			for (int j = i + 1; j < arr.length; j++) {
+				if (arr[i] == arr[j]) {
+					l_Ocurrence = j;
+					i++;
+				} else {
+					break;
+				}
+			}
+
+			if (f_Ocurrence != l_Ocurrence) {
+				System.out.print("First Ocurrence of :" + arr[i] + " is :");
+				System.out.println(f_Ocurrence);
+				System.out.print("Last Ocurrence of :" + arr[i] + " is : ");
+				System.out.println(l_Ocurrence);
+				f_Ocurrence = i;
+				l_Ocurrence = i;
+			}
+		}
+
+	}
+}

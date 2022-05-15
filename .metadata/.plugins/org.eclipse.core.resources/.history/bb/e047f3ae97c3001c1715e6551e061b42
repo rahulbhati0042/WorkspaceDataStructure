@@ -1,0 +1,30 @@
+package com.arrayproblems;
+
+public class FirstAndLastOccurrenceForAllItems {
+	public static void main(String[] args) {
+		
+		int arr[] = { 2, 3, 4, 5, 5, 7, 7, 7, 9, 11 };
+		int l = 0;
+		int r = arr.length - 1;
+		int first = l, last = l;
+		while (l < r) {
+
+			if (arr[l] == arr[l + 1]) {
+				if (arr[first] != arr[l])
+					first = l;
+				last = l + 1;
+				l++;
+				continue;
+			} else {
+				
+				first = l; last = l;
+				
+			}
+
+			System.out.println("Firsst O of :" + arr[l] + " is :" + first);
+			System.out.println("Last O of :" + arr[l] + " is :" + last);
+			System.out.println("========================");
+			l++;
+		}
+	}
+}
