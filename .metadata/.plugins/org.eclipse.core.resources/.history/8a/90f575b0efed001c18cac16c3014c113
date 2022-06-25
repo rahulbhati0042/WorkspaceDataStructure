@@ -1,0 +1,10 @@
+package com.arrayproblems;
+
+public class StockBuSellToMaximizeProfit {
+
+	public static void main(String[] args) {
+		int arr[] = {2, 3, 10, 6, 4, 8, 1};
+
+	}
+
+}

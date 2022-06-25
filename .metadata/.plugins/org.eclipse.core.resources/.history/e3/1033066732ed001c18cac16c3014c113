@@ -1,0 +1,10 @@
+package com.arrayproblems;
+
+public class ArrayPythagoreanTriplet {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

@@ -1,0 +1,42 @@
+package com.arrayproblems;
+
+import java.util.ArrayList;
+
+public class ArrayReverseGroup {
+
+	public static void main(String[] args) {
+		//int a[] = { 1, 2, 3, 4, 5 };
+		ArrayList<Integer> a= new ArrayList<>();
+		//87 21 48 56 35
+		a.add(87);
+		a.add(21);
+		a.add(48);
+		a.add(56);
+		a.add(35);
+		int k = 3;
+
+		int l = 0, h = k - 1;
+
+		while (l < h) {
+			int temp = a.get(l);
+			a.set(l, a.get(h));
+			a.set(h,temp);
+			
+			l++;
+			h--;
+		}
+		l = k;
+		h = a.size()-1;
+		while (l < h) {
+			int temp = a.get(l);
+			a.set(l, a.get(h));
+			a.set(h,temp);
+			
+			l++;
+			h--;
+		}
+
+		System.out.println(a);
+	}
+
+}

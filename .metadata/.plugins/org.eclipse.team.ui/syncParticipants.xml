@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <syncparticipants>
-<participant displayName="Git (ArraysProblems/src/com/arrayproblems)" id="org.eclipse.egit.ui.modelCompareParticipant" secondary_id="1652609664717">
+<participant displayName="Git (ArraysProblems)" id="org.eclipse.egit.ui.modelCompareParticipant" secondary_id="1656130823663">
 <data forceFetch="false" root="false">
-<org.eclipse.team.ui.MODEL_PARTICIPANT_SETTINGS org.eclipse.team.ui.MODEL_PARTICIPANT_DESCRIPTION="ArraysProblems/src/com/arrayproblems" startupAction="none">
+<org.eclipse.team.ui.MODEL_PARTICIPANT_SETTINGS org.eclipse.team.ui.MODEL_PARTICIPANT_DESCRIPTION="ArraysProblems" startupAction="none">
 <org.eclipse.team.ui.MODEL_PARTICIPANT_REFRESH_SCHEDULE org.eclipse.team.ui.CTX_REFRESHSCHEDULE_ENABLED="false" org.eclipse.team.ui.CTX_REFRESHSCHEDULE_INTERVAL="3600" org.eclipse.team.ui.CTX_REFRESHSCHEDULE_RUNONCE="false"/>
 <org.eclipse.team.ui.MODEL_PARTICIPANT_MAPPINGS modelProviderId="org.eclipse.core.resources.modelProvider">
 <mappings>
-<resources resourcePath="/ArraysProblems/src/com/arrayproblems" resourceType="2"/>
+<resources resourcePath="/ArraysProblems" resourceType="4"/>
 </mappings>
 </org.eclipse.team.ui.MODEL_PARTICIPANT_MAPPINGS>
 </org.eclipse.team.ui.MODEL_PARTICIPANT_SETTINGS>
-<gitSynchronizeData container="E:/Technical Documents/WorkSpaces/WorkspaceDataStructure/ArraysProblems" dstRev="refs/remotes/origin/master" inludeLocal="true" srcRev="HEAD">
-<includedPaths>
-<path path="E:/Technical Documents/WorkSpaces/WorkspaceDataStructure/ArraysProblems/src/com/arrayproblems"/>
-</includedPaths>
-</gitSynchronizeData>
+<gitSynchronizeData container="E:/Technical Documents/WorkSpaces/WorkspaceDataStructure/ArraysProblems" dstRev="refs/remotes/origin/master" inludeLocal="true" srcRev="HEAD"/>
 </data>
 </participant>
 </syncparticipants>
