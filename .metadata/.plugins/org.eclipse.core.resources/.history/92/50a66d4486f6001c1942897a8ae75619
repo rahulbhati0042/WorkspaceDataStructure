@@ -1,0 +1,26 @@
+package com.arrayproblems;
+
+public class TwoElementsWhoseSumClosestToZero {
+
+	public static void main(String[] args) {
+		int arr[] = { 1, 60, -10, 70, -80, 85 };
+		int n = arr.length;
+
+		int closestSum = Integer.MAX_VALUE;
+		int element_1 = 0, element_2 = 0;
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = i + 1; j < arr.length; j++) {
+				int sum = arr[i] + arr[j];
+				if (Math.abs(closestSum) > Math.abs(sum)) {
+					closestSum = sum;
+					element_1 = arr[i];
+					element_2 = arr[j];
+				}
+			}
+		}
+		System.out.println(closestSum);
+		System.out.println("Element -1 :"+element_1+" Element -2 :"+element_2);
+
+	}
+
+}

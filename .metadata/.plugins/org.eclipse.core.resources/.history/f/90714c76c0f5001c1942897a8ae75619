@@ -1,0 +1,23 @@
+package com.arrayproblems;
+
+import java.util.Arrays;
+
+public class FindMissingAndRepeatingNumber_Method2_Sorting {
+
+	public static void main(String[] args) {
+		int arr[] = { 4, 3, 6, 2, 5, 4 };
+		
+		Arrays.sort(arr);
+		boolean check = false;
+		int count = 0;
+		for (int i = 0; i < arr.length; i++) {
+			
+			if((i+1) != arr[i]){
+				System.out.println("Missing :" + (i+1));
+			}
+			
+		}
+
+	}
+
+}

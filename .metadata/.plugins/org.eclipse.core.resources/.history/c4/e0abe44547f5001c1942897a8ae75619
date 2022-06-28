@@ -1,0 +1,14 @@
+package com.arrayproblems;
+
+public class ArrayZigZagFashion {
+
+	public static void main(String[] args) {
+		int arr[]={4,3,7,8,6,2,1};
+		// Zikzag --- less then greater then
+		// a < b > c < d > e < f > g
+		
+		
+		
+	}
+
+}
