@@ -1,0 +1,17 @@
+package com.arrayproblems;
+
+public class FascinatingNumber {
+
+	public static void main(String[] args) {
+		int n = 853;
+		 String tmp = n+""+(n*2)+""+(n*3);
+		 System.out.println(tmp);
+		 if(!tmp.contains("0")){
+			 System.out.println("Fascinating");
+		 }else{
+			 System.out.println("Not Fascinating");
+		 }
+
+	}
+
+}

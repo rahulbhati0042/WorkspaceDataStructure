@@ -1,0 +1,10 @@
+package com.arrayproblems;
+
+public class NutsBolts_OR_LockKeyProblem {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
