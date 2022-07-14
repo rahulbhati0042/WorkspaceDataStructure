@@ -5,10 +5,7 @@ import java.util.Arrays;
 public class MajorityElement_Method2_Sorting {
 
 	public static void main(String[] args) {
-		int majority = -1;
-		// int A[] = { 1, 2, 3 };
-		//int arr[] = { 3, 1, 3, 3, 2 };
-		int arr[] = {3, 3, 4, 2, 4, 4, 2, 4, 4};
+		int arr[] = { 3, 3, 4, 2, 4, 4, 2, 4, 4 };
 		int n = arr.length;
 		Arrays.sort(arr);
 		if (n == 1)
@@ -21,11 +18,9 @@ public class MajorityElement_Method2_Sorting {
 				count = 1;
 				temp = arr[i];
 			}
-
 			if (max_ele < count) {
 				max_ele = count;
 				ele = arr[i];
-
 				if (max_ele > (n / 2)) {
 					f = 1;
 					break;

@@ -26,6 +26,4 @@ public class NutsBolts_OR_LockKeyProblem {
         System.out.println("Nuts :"+Arrays.toString(nuts));
         System.out.println("Bolts :"+Arrays.toString(bolts));
 	}
-	
-
 }
