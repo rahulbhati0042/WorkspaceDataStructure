@@ -1,0 +1,25 @@
+package com.arrayproblems;
+
+import java.util.ArrayList;
+
+public class PlusOneProblem {
+public static void main(String[] args) {
+	ArrayList<Integer> arr =new ArrayList<Integer>();
+	arr.add(1);
+	arr.add(2);
+	arr.add(4);
+	int N = arr.size();
+	 String str="";
+     ArrayList<Integer> result = new ArrayList<Integer>();
+     for(int i=0; i<N; i++){
+         str= str+""+arr.get(i);
+     }
+     int d = Integer.parseInt(str)+1;
+     String s = ""+d;
+      char[] a = s.toCharArray();
+     for(int i=0; i<a.length; i++){
+         int dt = a[i];
+         result.add(dt);
+     }
+}
+}

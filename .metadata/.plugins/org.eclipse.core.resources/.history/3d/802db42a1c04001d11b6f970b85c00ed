@@ -1,0 +1,16 @@
+package com.recursion.problems;
+
+public class FabonacciSeriesProblem {
+
+	public static void main(String[] args) {
+		System.out.println(fabonachiNumber(6));
+	}
+
+	private static int fabonachiNumber(int n) {
+		if (n <= 1)
+			return n;
+
+		return fabonachiNumber(n - 1) + fabonachiNumber(n - 2);
+	}
+
+}

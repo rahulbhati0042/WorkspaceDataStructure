@@ -1,0 +1,24 @@
+package com.arrayproblems;
+
+public class FrequenciesOfArrayElements {
+
+	public static void main(String[] args) {
+		int arr[] = { 2, 3, 2, 3, 5 };
+		int N = arr.length;
+		int P = 5;
+		int count = 0;
+		int k = 0;
+		for (int i = 1; i <= P; i++) {
+			count = 0;
+			for (int j = 0; j < N; j++) {
+				if (i == arr[j]) {
+
+					count = count + 1;
+				}
+			}
+			arr[k] = count;
+			k = k + 1;
+
+		}
+	}
+}

@@ -1,0 +1,19 @@
+package com.recursion.problems;
+
+import java.util.ArrayList;
+
+public class SubsequenceSets {
+
+	public static void main(String[] args) {
+		int[] arr = { 1, 2, 3 };
+		ArrayList<Integer> path = new ArrayList<>();
+		printSubsequences(arr, 0, path);
+	}
+
+	private static void printSubsequences(int[] arr, int i,
+			ArrayList<Integer> path) {
+		//base case
+		if(i == path)
+	}
+
+}
