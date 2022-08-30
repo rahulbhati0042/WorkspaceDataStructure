@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class MergeTwoArraysSort {
 
 	public static void main(String[] args) {
-		int arr[]={19,25,137,252,620,20,42,176,192,210};
+		int arr[]={5, 6, 6, 7, 9,3, 6, 8, 44, 77};
 		int tmpArr[] = new int[10];
 		int lb1=0, ub1=4;
 		int lb2 = 5, ub2 = arr.length;

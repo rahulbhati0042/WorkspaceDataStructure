@@ -1,0 +1,26 @@
+package com.permutation.combination;
+
+public class StringCombination {
+	
+	public static void main(String[] args) {
+		String str = "hijk";
+		int s = 0;
+		int e = str.length();
+		__printAllCombinations(str, s, e);
+	}
+
+	private static void __printAllCombinations(String str, int s, int e) {
+		if (s == e) {
+			System.out.println(str);
+			return;
+		}
+		
+		for(int i=0; i< e; i++){
+			char tmp = str.charAt(s);
+			str.replace(str.charAt(s), str.charAt(i));
+			str.replace(str.charAt(i), tmp);
+			
+			__printAllCombinations(str, s, i);
+		}
+	}
+}

@@ -20,9 +20,7 @@ public class InsertionSort_WhileLoop {
 			y++;
 		}
 		System.out.println(Arrays.toString(a));
-		  int sum = 5;
-		  double median =(double) sum / 2;
-		  System.out.println(median);
+
 	}
 
 }

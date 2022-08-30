@@ -1,0 +1,33 @@
+package com.binaryinsertionsort;
+
+public class BinaryInsertionSort {
+
+	public static void main(String[] args) {
+		int arr[] = { 25, 92, 12, 76, 84, 32, 76 };
+		
+		int lb =0;
+		int ub = arr.length;
+		int si=0; int ei=0;
+		int mid =0;
+		int num=0;
+		while(lb<ub){
+			num = arr[lb];
+			while(si<=ei){
+				
+				mid = si+(ei-si)/2;
+				if(arr[mid]==num) break;
+				else if(num< arr[mid]){
+					ei = mid-1;
+				}else {
+					si = mid+1;
+				}
+			}
+			
+			
+			
+			lb++;
+		}
+
+	}
+
+}

@@ -1,0 +1,29 @@
+package com.cocktailshaker;
+
+import java.util.Arrays;
+
+public class Cocktrail_Shaker_Sort {
+	public static void main(String[] args) {
+		int arr[] = { 5, 6, 6, 7, 9, 3, 6, 8, 44, 77 };
+		int lb = 0;
+		int ub = arr.length - 1;
+		int tmp = 0;
+		boolean swapHappend = true;
+		int e =lb;
+		int f = ub;
+		
+		
+		
+		while(e < lb){
+			if (arr[e] > arr[e+1]) {
+				tmp = arr[e];
+				arr[e] = arr[e + 1];
+				arr[e + 1] = tmp;
+				swapHappend = true;
+			}
+		}
+		
+		
+		
+	}
+}

@@ -1,0 +1,37 @@
+package com.stoogesort;
+
+public class StoogeSort {
+	static int arr[] = { 5, 6, 1 };
+
+	public static void main(String[] args) {
+
+		int lb = arr[0];
+		int ub = arr[arr.length - 1];
+		
+		entry(arr,lb,ub);
+
+	}
+
+	public static int[] entry(int arr[],int lb,int ub){
+		if (arr[lb] > arr[ub]) {
+			int tmp = arr[lb];
+			arr[lb] = arr[ub];
+			arr[ub] = tmp;
+		}
+		
+		return arr;
+	}
+	
+	
+	
+	static int[] left(int[] left) {
+		return arr;
+
+	}
+
+	static int right(int right) {
+		return right;
+
+	}
+
+}

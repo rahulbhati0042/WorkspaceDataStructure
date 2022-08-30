@@ -1,0 +1,10 @@
+package com.timsort;
+
+public class TimSort_WhileLoop {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

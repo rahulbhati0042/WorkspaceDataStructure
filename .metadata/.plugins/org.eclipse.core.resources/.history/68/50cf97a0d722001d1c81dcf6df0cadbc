@@ -1,0 +1,52 @@
+package com.timsort;
+
+import java.util.Arrays;
+
+public class TimSort_WhileLoop {
+
+	public static void main(String[] args) {
+		int arr[] = { 9, 6, 5, 6, 7, 3, 8, 77, 6, 44, 8, 33, 11, 44, 11, 22,
+				44, 88, 55, 2 };
+		int segment = 5;
+		int numerOfCycle = arr.length / segment;
+		int e = 0;
+		int y = 0, num = 0, z = 0;
+		int c = 0 , d=0;;
+		while (e < numerOfCycle) {
+			int segmentArr[] = new int[segment];
+			int itemIndex = 0;
+			while (itemIndex < segment) {
+				segmentArr[itemIndex] = arr[c];
+				c++;
+				itemIndex++;
+			}
+			System.out.println("Before segment insertion sort");
+			System.out.println(Arrays.toString(segmentArr));
+			y = 1;
+			while (y < segmentArr.length) {
+				num = segmentArr[y];
+				z = y - 1;
+				while (z >= 0 && segmentArr[z] > num) {
+					segmentArr[z + 1] = segmentArr[z];
+					z--;
+				}
+				segmentArr[z + 1] = num;
+				itemIndex =0;
+				while (itemIndex < segment) {
+					arr[d]=segmentArr[itemIndex];
+					d++;
+					itemIndex++;
+				}
+				y++;
+			}
+			System.out.println("After segment insertion sort");
+			System.out.println(Arrays.toString(segmentArr));
+			e++;
+		}
+		System.out.println("===========segments");
+		System.out.println(arr);
+		
+
+	}
+
+}
