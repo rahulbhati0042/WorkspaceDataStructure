@@ -1,0 +1,10 @@
+package com.countinginversion;
+
+public class CountingInversion_MergeSort {
+	public static void main(String[] args) {
+		int arr[] = { 6,4,12,3,32,76,54,19,27,62 };
+		int e =0;
+		int f=0;
+		int inversionCount =0;
+	}
+}
