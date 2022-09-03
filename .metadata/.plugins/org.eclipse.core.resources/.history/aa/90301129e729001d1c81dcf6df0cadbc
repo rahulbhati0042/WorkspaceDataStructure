@@ -1,0 +1,36 @@
+package com.find.kth;
+
+public class FindKthElements {
+
+	public static void main(String[] args) {
+		int arr[] = { 44, 11, 99, 77, 33, 22, 55 };
+		int e = 0;
+		int max = 0;
+		while (e < arr.length) {
+			max = Math.max(max, arr[e]);
+			e++;
+		}
+		int tmp[] = new int[max+1];
+		e=0;
+		while(e<arr.length){
+			tmp[arr[e]] = 1;
+			e++;
+		}
+		///find kth elements
+		int k =8;
+		int count =0;
+		
+		e=0;
+		while(e<tmp.length){
+			if(tmp[e]==1){
+				count++;
+				
+			}if(count==k){
+				System.out.println("Kth Smallest :"+e);
+				break;
+			}
+			e++;
+		}
+	}
+
+}

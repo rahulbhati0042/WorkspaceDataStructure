@@ -1,0 +1,10 @@
+package com.find.kth;
+
+public class FindKthElements {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

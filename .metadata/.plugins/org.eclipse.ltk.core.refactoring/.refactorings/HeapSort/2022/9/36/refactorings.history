@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.heapsort.FindKthElement_MinHeap&apos; to &apos;ArrayToMinHeap&apos;&#x0D;&#x0A;- Original project: &apos;HeapSort&apos;&#x0D;&#x0A;- Original element: &apos;com.heapsort.FindKthElement_MinHeap&apos;&#x0D;&#x0A;- Renamed element: &apos;com.heapsort.ArrayToMinHeap&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;FindKthElement_MinHeap&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.heapsort{FindKthElement_MinHeap.java[FindKthElement_MinHeap" matchStrategy="1" name="ArrayToMinHeap" qualified="false" references="true" similarDeclarations="false" stamp="1662113407225" textual="false" version="1.0"/>
+</session>
