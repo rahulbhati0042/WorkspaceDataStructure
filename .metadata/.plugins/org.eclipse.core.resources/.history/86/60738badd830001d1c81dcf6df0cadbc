@@ -1,0 +1,10 @@
+package com.subarray;
+
+public class FindSumArraySum_To_Target_Brutforce {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

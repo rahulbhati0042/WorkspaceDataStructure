@@ -1,0 +1,27 @@
+package com.gcf;
+
+public class EclideanAlgorithm {
+	public static void main(String[] args) {
+		int numA = 70;
+		int numB = 20;
+
+		int e = 0;
+		int f = 0;
+		if (numA > numB) {
+			e = numA;
+			f = numB;
+		} else {
+			e = numB;
+			f = numA;
+		}
+
+		while (f!=0 && e / f != 0 ) {
+			int a = e / f;
+			int b = e % f;
+			e = f;
+			f = b;
+		}
+		System.out.println(e);
+
+	}
+}

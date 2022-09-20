@@ -1,0 +1,13 @@
+package com.subarray;
+//LIS - Longest Increasing Sub Sequecnce Length
+public class LengthOf_LIS {
+
+	public static void main(String[] args) {
+		int arr[] = { 12, 3, 92, -3, 76, 54, 12, 93, 78 };
+		int previous = 0;
+		int e = 0;
+		int f = 0;
+
+	}
+
+}

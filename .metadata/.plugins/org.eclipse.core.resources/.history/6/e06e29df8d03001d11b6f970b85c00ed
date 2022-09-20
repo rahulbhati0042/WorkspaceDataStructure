@@ -1,8 +1,0 @@
-package com.recursion.problems;
-
-public class LearnPrintNumber {
-	public static void main(String[] args) {
-		
-	}
-	LinearlyPrint
-}

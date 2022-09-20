@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/SubArrayProblems/src/com/subarray/TwoArrays_LCS_Length_Using_MatrixApproach.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.subarray.TwoArrays_LCS_Length_Using_MatrixApproach"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="SubArrayProblems"/>
+</launchConfiguration>

@@ -1,0 +1,58 @@
+package com.subarray;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+public class CommonAllAsendingOrder_Subarray_TwoArrays {
+
+	public static void main(String[] args) {
+		int arrA[] = { 12, 3, 92, -3, 76, 54, 12, 93, 78 };
+		int arrB[] = { 12, 3, 92, -3, 76, 54, 12, 93, 78 };
+		//int arrB[] = { 12, 3, 31, -3, 76, 53, 12, 93, 78 };
+		Map<Integer, ArrayList<Integer>> arrAMap = getSubArrays(arrA);
+		Map<Integer, ArrayList<Integer>> arrBMap = getSubArrays(arrB);
+		System.out.println("ok'");
+		
+		Map<Integer, ArrayList<Integer>> C = new HashMap<Integer, ArrayList<Integer>>();
+		int i=0;
+		 for (Map.Entry<Integer,ArrayList<Integer>> entry : arrAMap.entrySet()) {
+			if( arrBMap.containsValue(entry.getValue())){
+				C.put(i, entry.getValue());
+				i++;
+			}
+		 }
+		 System.out.println(C);
+	}
+
+	public static Map<Integer, ArrayList<Integer>> getSubArrays(int arr[]) {
+		int previous = 0;
+		int e = 0;
+		int f = 0;
+		int flag[] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+
+		Map<Integer, ArrayList<Integer>> arrAMap = new HashMap<Integer, ArrayList<Integer>>();
+		for (e = 0; e <= 7; e++) {
+			if (flag[e] == 1)
+				continue;
+			previous = e;
+			ArrayList<Integer> a = new ArrayList<>();
+			for (f = e + 1; f <= 8; f++) {
+				if (arr[f] > arr[previous]) {
+					// System.out.print(arrA[previous] + ",");
+					a.add(arr[previous]);
+					previous = f;
+					flag[f] = 1;
+				}
+			}
+			if (previous > e) {
+				// System.out.print(arrA[previous]);
+				a.add(arr[previous]);
+			}
+			System.out.println();
+			arrAMap.put(e, a);
+		}
+		return arrAMap;
+	}
+
+}

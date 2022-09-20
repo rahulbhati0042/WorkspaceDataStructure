@@ -1,0 +1,25 @@
+package com.subarray;
+
+import java.util.Arrays;
+
+public class PrintAllPossibleSubSequence_Non_ContiguousForm {
+
+	public static void main(String[] args) {
+
+		char[] arr = { 'a', 'b', 'c', 'd' };
+		int tmpArr[] = new int[4];
+		int e = 0;
+		int power = 1;
+		while (e < arr.length) {
+			int f=e;
+			while (f != 0) {
+				power = power * 2;
+				--f;
+			}
+			tmpArr[e]=power;
+		}
+		System.out.println(Arrays.toString(tmpArr));
+
+	}
+
+}

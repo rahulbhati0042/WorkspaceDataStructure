@@ -1,0 +1,31 @@
+package GreatestCommonDivisor;
+
+public class GreatestCommonDivisor_Nitems {
+
+	public static void main(String[] args) {
+		int arr[] = {30,42};
+		int hcf = 0;
+		int e =1;
+		while(e<12){
+			
+			boolean is = false;
+			int f = 0;
+			while(f<arr.length){
+				if(arr[f]%e!=0){
+					is =false;
+					break;
+				}
+				is = true;
+				f++;
+			}
+			if(is){
+				hcf = e;
+			}
+			
+			e++;
+		}
+		System.out.println(hcf);
+
+	}
+
+}

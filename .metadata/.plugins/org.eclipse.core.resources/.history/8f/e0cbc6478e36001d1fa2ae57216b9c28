@@ -1,0 +1,30 @@
+package com.subarray;
+
+import java.util.Arrays;
+
+public class TwoArrays_LCS_Length_Using_MatrixApproach {
+	public static void main(String[] args) {
+		int x[] = { 12, 3, 92, 12, 93, 78 };
+		int y[] = { 54, 12, 93, 78, 93, 78 };
+
+		int store[][] = new int[x.length + 1][y.length + 1];
+		
+		
+		
+		for(int e=1; e<x.length;e++){
+			
+			for(int f=1; f<y.length;f++){
+				
+				
+				
+				
+			}
+			
+			
+			
+		}
+		
+	System.out.println(Arrays.toString(store));	
+	}
+	
+}

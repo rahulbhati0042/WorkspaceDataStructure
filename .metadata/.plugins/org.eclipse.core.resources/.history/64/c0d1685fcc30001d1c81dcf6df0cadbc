@@ -1,0 +1,28 @@
+package com.subarray;
+
+public class Kadane_MaxSubArray_Pair {
+
+	public static void main(String[] args) {
+		int arr[] = { 10, -2, 3, 7, -5, 8, 6, -2 };
+
+		int maxSum = 0;
+		int localMax = arr[0];
+		int globalMax = arr[0];
+		int e = 1;
+		while (e < arr.length) {
+
+			if (arr[e] > (localMax + arr[e])) {
+				localMax = arr[e];
+
+			} else {
+				localMax = localMax + arr[e];
+			}
+			if (localMax > globalMax)
+				globalMax = localMax;
+
+			e++;
+		}
+		System.out.println(globalMax);
+	}
+
+}

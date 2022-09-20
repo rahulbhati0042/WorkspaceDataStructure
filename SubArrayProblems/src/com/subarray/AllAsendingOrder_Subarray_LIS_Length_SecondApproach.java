@@ -1,0 +1,37 @@
+package com.subarray;
+
+import java.util.Arrays;
+
+//LIS - Longest Increasing Sub Sequecnce Length
+public class AllAsendingOrder_Subarray_LIS_Length_SecondApproach {
+
+	public static void main(String[] args) {
+		int arr[] = { 12, 3, 92, -3, 76, 54, 12, 93, 78 };
+
+		int e = 0;
+		int f = 0;
+
+		int m[] = new int[arr.length];
+		for (int i = 0; i < m.length; i++)
+			m[i] = 1;
+		
+		f= e+1;
+		while(f<arr.length){
+			
+			if(arr[f]>arr[e] && (m[e]+1)>m[f]){
+				m[f]=m[e]+1;
+			}
+			else if(e==f){
+				e =0;
+				f++;
+			}
+			e++;
+		}
+		System.out.println(Arrays.toString(m));
+		int maxLength=0;
+		for (int i = 0; i < m.length; i++)
+			maxLength = Math.max(m[i], maxLength);
+		System.out.println("Length of LIS :" + maxLength);
+	}
+
+}
