@@ -1,0 +1,25 @@
+package com.arrayproblems;
+
+public class ArrayContainDuplicate {
+
+	public static void main(String[] args) {
+		int arr[]={1,2,3,4,5};
+		
+		int e=1;
+		int f=0;
+		while(e<arr.length){
+			f=0;
+			while(f<e){
+				if(arr[e]==arr[f]) {
+					System.out.println("True");
+					break;
+				}
+				f++;
+			}
+			
+			e++;
+		}
+
+	}
+
+}

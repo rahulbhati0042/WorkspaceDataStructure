@@ -1,0 +1,26 @@
+package com.palindrome;
+
+import java.util.Arrays;
+
+public class Palindrome_SubString_DynamicProgramming {
+	public static void main(String[] args) {
+		char str[] = { 'a', 'a', 'c', 'a', 'a', 'c' };
+		int len = str.length;
+		// int startingPoint, endPoint;
+		int sp = 0, ep = 0;
+		char[][] store = new char[len][len];
+		// 1 true
+		// 0 false
+		
+		// Case-1 when Length is 1
+		while (ep < len) {
+			store[sp][ep] = 'T';
+			sp++;
+			ep++;
+		}
+		
+		for (int k = 0; k < store.length; k++)
+			System.out.println(Arrays.toString(store[k]));
+		
+	}
+}

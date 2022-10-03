@@ -1,0 +1,57 @@
+package com.palindrome;
+
+import java.util.Arrays;
+
+public class Palindrome_SubString_DynamicProgramming {
+	public static void main(String[] args) {
+		char str[] = { 'a', 'c', 'c', 'a', 'c', 'c' };
+		int len = str.length;
+		// int startingPoint, endPoint;
+		int sp = 0, ep = 0;
+		char[][] store = new char[len][len];
+		// 1 true
+		// 0 false
+
+		// Case-1 when Length is 1
+		while (sp < len) {
+			ep = 0;
+			while (ep < len) {
+				if (sp == ep) {
+					store[sp][ep] = 'T';
+				} else if (ep < sp && ep - sp < 0) {
+
+					store[sp][ep] = 'F';
+				}
+				ep++;
+			}
+			sp++;
+
+		}
+
+		int e = 1;
+		sp = 0;
+		ep = 1;
+		while (e < str.length) {
+			ep = e;
+			sp = ep - 1;
+			while (ep < str.length) {
+				if (ep - sp == 1) {
+					if (str[sp] == str[ep])
+						store[sp][ep] = 'T';
+					else
+						store[sp][ep] = 'F';
+
+				}else if (str[sp] == str[ep]){
+					store[sp][ep] = store[sp+1][ep-1];
+				}else{
+					store[sp][ep] = 'F';
+				}
+				ep++;
+			}
+			e++;
+		}
+		for (int k = 0; k < store.length; k++)
+			System.out.println(Arrays.toString(store[k]));
+
+	}
+}

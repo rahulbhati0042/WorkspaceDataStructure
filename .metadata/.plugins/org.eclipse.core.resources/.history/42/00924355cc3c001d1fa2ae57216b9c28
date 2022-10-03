@@ -1,0 +1,12 @@
+package com.palindrome;
+
+public class Palindrome_SubString_DynamicProgramming {
+	public static void main(String[] args) {
+		char str[] = { 'a', 'a', 'c', 'a', 'a', 'c' };
+		int len = str.length;
+		int e, f, g;
+		
+		
+	}
+
+}

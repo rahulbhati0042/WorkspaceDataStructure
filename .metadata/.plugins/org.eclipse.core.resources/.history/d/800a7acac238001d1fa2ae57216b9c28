@@ -1,0 +1,34 @@
+package com.knapsack;
+
+public class KnapshakBounded_BrutForce {
+	public static void main(String[] args) {
+		int weightArray[] = { 1, 2, 3, 4, 5, 6 };
+		int valueArray[] = { 1, 2, 3, 4, 5, 6 };
+		int size = weightArray.length - 1;
+		int capacity = 50;
+		int result = getKnapsackFillValue(weightArray, valueArray, size,
+				capacity);
+		System.out.println(result);
+	}
+
+	public static int getKnapsackFillValue(int weightArray[], int valueArray[],
+			int size, int capacity) {
+		return getKnapsack(weightArray, valueArray, size, capacity, 0);
+	}
+
+	private static int getKnapsack(int[] weightArray, int[] valueArray,
+			int size, int capacity, int index) {
+		int value1, value2, maxValue;
+		if (capacity <= 0 || index >= size && index < 0)
+			return 0;
+		value1 = 0;
+		if (weightArray[index] <= capacity)
+			value1 = valueArray[index]
+					+ getKnapsack(weightArray, valueArray, size, capacity
+							- weightArray[index], index + 1);
+
+		value2 = getKnapsack(weightArray, valueArray, size, capacity, index + 1);
+		maxValue = Math.max(sumValue, anotherVar);
+		return maxValue;
+	}
+}

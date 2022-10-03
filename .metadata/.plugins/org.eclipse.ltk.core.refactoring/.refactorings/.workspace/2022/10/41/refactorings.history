@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;SubArrayProblems&apos; to &apos;Sub_Sequence_SubArrayProblems&apos;" description="Rename resource &apos;SubArrayProblems&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/SubArrayProblems" name="Sub_Sequence_SubArrayProblems" stamp="1664778604059" updateReferences="true"/>
+</session>

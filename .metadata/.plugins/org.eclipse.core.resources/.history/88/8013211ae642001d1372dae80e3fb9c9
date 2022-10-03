@@ -1,0 +1,13 @@
+package com.setofcoins;
+
+public class CoinsProblem_TabaularForm_DynamicProgramming {
+	static int voc[] = { 5, 10 };
+	static int value = 10; // 10rupes banana he
+
+	int table[][] = new int[voc.length][value];
+
+	public static void main(String[] args) {
+
+	}
+
+}

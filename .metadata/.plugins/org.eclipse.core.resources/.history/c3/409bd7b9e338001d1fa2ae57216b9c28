@@ -1,0 +1,33 @@
+package com.knapsack;
+
+import java.util.Arrays;
+
+public class KnapshakBounded_Matrix_Approach {
+	static int numberOfCopies=0;
+	public static void main(String[] args) {
+
+		int weightArray[] = { 1,5,3,7 };
+		int valueArray[] = { 5,2,1,6 };
+		int size = weightArray.length;
+		int capacity = 7;
+		int store[][] = new int[size+1 ][capacity+1 ];
+		
+		for (int e = 1; e < size; e++) {
+			
+			for (int f = 1; f < capacity+1; f++) {
+				if(e==1 ){
+					if(f>=weightArray[e]){
+						store[e][f]=weightArray[e];
+					}
+				}else{
+					
+				}
+			}
+		}
+		System.out.println("Longest Common SubSequnce Length :"+maxSS);
+		for (int e = 0; e < store.length; e++)
+			System.out.println(Arrays.toString(store[e]));
+	}
+
+	
+}

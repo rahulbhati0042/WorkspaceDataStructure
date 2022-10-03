@@ -1,0 +1,10 @@
+package com.knapsack;
+
+public class KnapshakBounded_BrutForce {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
