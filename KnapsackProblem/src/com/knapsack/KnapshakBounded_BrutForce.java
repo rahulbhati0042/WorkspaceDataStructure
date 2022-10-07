@@ -1,8 +1,6 @@
 package com.knapsack;
 
 public class KnapshakBounded_BrutForce {
-	static int numberOfCopies = 0;
-
 	public static void main(String[] args) {
 		int weightArray[] = { 1, 5, 10, 15, 20, 22 };
 		int valueArray[] = { 5, 2, 6, 4, 5, 3 };

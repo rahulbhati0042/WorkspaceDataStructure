@@ -5,11 +5,11 @@ import java.util.Arrays;
 public class CoinsProblem_TabaularForm_DynamicProgramming {
 	static int voc[] = { 0, 2, 3, 5 };
 	static int value = 10; // 10rupes banana he
-
 	static int table[][] = new int[voc.length][value + 1];
 	static int minimumCoins = Integer.MAX_VALUE;
 	static int e = 0;
 	static int intMax = Integer.MAX_VALUE - 1;
+
 	public static void main(String[] args) {
 		table[0][0] = 0;
 		int column = 1;
@@ -31,13 +31,13 @@ public class CoinsProblem_TabaularForm_DynamicProgramming {
 				}
 				column++;
 			}
-			minimumCoins = Math.min(minimumCoins, table[row][column-1]);
+			minimumCoins = Math.min(minimumCoins, table[row][column - 1]);
 			row++;
 			column = 1;
-}
+		}
 		for (int e = 0; e < table.length; e++)
 			System.out.println(Arrays.toString(table[e]));
-		System.out.println("Minimum number of coins require are " + minimumCoins
-				+ " to get " + value);
+		System.out.println("Minimum number of coins require are "
+				+ minimumCoins + " to get " + value);
 	}
 }
