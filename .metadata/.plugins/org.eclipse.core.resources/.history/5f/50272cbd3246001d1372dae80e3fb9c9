@@ -1,0 +1,5 @@
+package com.singlylinkedlist;
+
+public class Node {
+
+}
