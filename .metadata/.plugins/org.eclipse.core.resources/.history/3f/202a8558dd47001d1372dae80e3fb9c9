@@ -1,0 +1,42 @@
+package com.array.problems;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+
+public class StartAndEndTimeProblem_Approach2 {
+
+	public static void main(String[] args) {
+		List<Interval> list = new ArrayList<>();
+		list.add(new Interval(20, 25));
+		list.add(new Interval(21, 40));
+		list.add(new Interval(2, 10));
+		list.add(new Interval(5, 15));
+		list.add(new Interval(6, 19));
+		list.add(new Interval(23, 44));
+
+		for (int i = 0; i < list.size(); i++)
+			System.out.println(list.get(i).start + " - " + list.get(i).end);
+
+	}
+
+	static class Interval implements Comparator<Integer> {
+		int start, end;
+
+		public Interval(int start, int end) {
+
+			this.start = start;
+			this.end = end;
+		}
+
+		@Override
+		public int compare(Integer obj1, Integer obj2) {
+			// TODO Auto-generated method stub
+			if (obj1 < obj2) {
+				return 1;
+			}
+			return 0;
+
+		}
+	}
+}
