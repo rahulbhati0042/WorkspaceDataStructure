@@ -1,0 +1,29 @@
+package com.doublylinkedlist;
+
+public class MultiLevelDoublyLinkedList {
+	static Node head;
+	static Node tail;
+	public static void main(String[] args) {
+		
+		int arr[] ={10,50,5,70,62,93,84,0,0,0,70,50,0,0,67};
+		
+		addAtEnd(1);
+		addAtEnd(2);
+		addAtEnd(3);
+		addAtEnd(4);
+
+	}
+	public static void addAtEnd(int data) {
+		Node n = new Node();
+		n.data = data;
+		n.next = n.prev = null;
+
+		if (head == null) {
+			head = tail = n;
+		} else {
+			tail.next = n;
+			n.prev = tail;
+			tail = n;
+		}
+	}
+}

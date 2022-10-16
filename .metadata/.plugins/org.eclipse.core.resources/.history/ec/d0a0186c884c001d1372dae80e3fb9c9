@@ -1,0 +1,27 @@
+package com.doublylinkedlist;
+public class Travers {
+	static Node head;
+	static Node tail;
+
+	public static void main(String[] args) {
+		Node j = null;
+		for (j = head; j != null; j = j.next)
+			System.out.println(j.data);
+	}
+
+	private static void traverseTopToBottom() {
+		Node t = head;
+		for (t = head; t != null; t = t.next) {
+			System.out.println(t.data);
+		}
+
+	}
+
+	private static void traverseBottomToTop() {
+		Node t = head;
+		for (t = head; t != null; t = t.next) {
+			System.out.println(t.data);
+		}
+
+	}
+}
