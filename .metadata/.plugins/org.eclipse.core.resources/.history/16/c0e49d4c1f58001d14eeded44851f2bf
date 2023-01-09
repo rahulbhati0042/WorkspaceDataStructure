@@ -1,0 +1,62 @@
+package com.bst;
+
+public class Minimum_Or_Smallest_Number_RootToLeaf {
+	static Node root;
+	static int smallestPath = Integer.MAX_VALUE;;
+
+	public static void main(String[] args) {
+		// int arr[] = { 10, 50, 200, 25, 75, 150, 250, 4, 35, 85, 300 };
+		int arr[] = { 10, 8, 15, 7, 9, 13, 16, 11, 14 };
+		for (int i = 0; i < arr.length; i++)
+			insertion(arr[i]);
+
+		
+		//smallestPath = ;
+		System.out.println("Smallest Path Num :"+smallestPath(root, smallestPath));
+	}
+
+	public static int smallestPath(Node t, int num) {
+		
+		if (t.left == null && t.right == null) {
+			//System.out.println(str);
+			return num;
+		}
+		int left = num;
+		int right = num;
+		if (t.left != null) {
+			left=smallestPath(t.left, num+1);
+		}
+		if (t.right != null) {
+			right=smallestPath(t.right, num+1);
+		}
+		return Math.min(left, right)+1;
+	}
+
+	public static void insertion(int data) {
+		Node n = new Node();
+		n.data = data;
+		n.left = n.right = null;
+		if (root == null) {
+			root = n;
+			return;
+		}
+		Node j = root;
+		while (true) {
+			if (j.data > n.data) {
+				if (j.left == null) {
+					j.left = n;
+					break;
+				} else
+					j = j.left;
+
+			} else {
+				if (j.right == null) {
+					j.right = n;
+					break;
+				} else
+					j = j.right;
+			}
+		}
+
+	}
+}

@@ -1,0 +1,54 @@
+package com.bst;
+
+//pending
+public class BST_MaxDiameter {
+	static Node root;
+    static int maxDiameter=0;
+	public static void main(String[] args) {
+		int arr[] = { 10, 8, 15, 7, 9, 14, 16, 18 };
+		for (int i = 0; i < arr.length; i++)
+			insertion(arr[i]);
+		heights(root);
+		System.out.println("Max Diameter : " + maxDiameter);
+	}
+	
+
+	public static int heights(Node t) {
+
+		if (t == null)
+			return 0;
+		int left = heights(t.left);
+		int right = heights(t.right);
+		int diameter = left + right +1;
+		maxDiameter =  Math.max(diameter, maxDiameter);
+		return Math.max(left, right) + 1;
+	}
+
+	public static void insertion(int data) {
+		Node n = new Node();
+		n.data = data;
+		n.left = n.right = null;
+		if (root == null) {
+			root = n;
+			return;
+		}
+		Node j = root;
+		while (true) {
+			if (j.data > n.data) {
+				if (j.left == null) {
+					j.left = n;
+					break;
+				} else
+					j = j.left;
+
+			} else {
+				if (j.right == null) {
+					j.right = n;
+					break;
+				} else
+					j = j.right;
+			}
+		}
+
+	}
+}

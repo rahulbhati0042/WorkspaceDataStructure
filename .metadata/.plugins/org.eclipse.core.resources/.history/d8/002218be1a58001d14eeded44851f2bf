@@ -1,0 +1,63 @@
+package com.bst;
+
+public class Root_To_Leaf_Paths {
+	static Node root;
+
+	public static void main(String[] args) {
+		int arr[] = { 10, 8, 15, 7, 9, 13, 16, 11, 14 };
+		for (int i = 0; i < arr.length; i++)
+			insertion(arr[i]);
+
+		String str = "" + root.data;
+		path(root, str);
+
+	}
+
+	public static void path(Node t, String str) {
+		String l = str;
+		String r = str;
+		if (t.left == null && t.right == null) {
+			System.out.println(str);
+			return;
+		}
+		if (t.left != null) {
+			str =str + "->" + t.left.data;
+
+		}
+		if (t.right != null) {
+			str= str+ "->" + t.right.data;
+
+		}
+		path(t.left, l);
+		path(t.right, r);
+
+	}
+
+	public static void insertion(int data) {
+		Node n = new Node();
+		n.data = data;
+		n.left = n.right = null;
+		if (root == null) {
+			root = n;
+			return;
+		}
+		Node j = root;
+		while (true) {
+			if (j.data > n.data) {
+				if (j.left == null) {
+					j.left = n;
+					break;
+				} else
+					j = j.left;
+
+			} else {
+				if (j.right == null) {
+					j.right = n;
+					break;
+				} else
+					j = j.right;
+			}
+		}
+
+	}
+}

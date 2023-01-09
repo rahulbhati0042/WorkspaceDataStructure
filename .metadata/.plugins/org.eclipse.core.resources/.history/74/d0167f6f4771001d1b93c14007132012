@@ -1,0 +1,23 @@
+package com.arrays.examples;
+
+public class SmallerNumbersThanCurrent {
+	public static void main(String[] args) {
+		int arr[] = {8,1,2,2,3};
+		System.out.println(smallerNumbersThanCurrent(arr));
+	}
+	 public static int[] smallerNumbersThanCurrent(int[] nums) {
+	        int e = 0;
+	        int f = 0;
+	        int smallerNum[] = new int[nums.length];
+	        int count = 0;
+	        while(e < nums.length) {
+	            f = 0;
+	           while(f < nums.length){
+	                if(nums[e]> nums[f]) 
+	                    smallerNum[smallerNum[e]]++;
+	            }
+	            smallerNum[e] = count;
+	        }
+	        return smallerNum;
+	    }
+}

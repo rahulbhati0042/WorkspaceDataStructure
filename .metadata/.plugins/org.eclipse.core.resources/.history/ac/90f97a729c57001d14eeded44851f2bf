@@ -1,0 +1,64 @@
+package com.bst;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class Level_Order_Traversal_With_Level_Number {
+	static Node root;
+	static Queue<Node> queue = new LinkedList<Node>();
+	static Queue<Integer> queueLevelNumber = new LinkedList<Integer>();
+
+	public static void main(String[] args) {
+
+		int arr[] = { 100, 200, 50, 21, 75, 150, 300, 60, 80, 180, 160, 180 };
+		int levelNumer = 0;
+		for (int i = 0; i < arr.length; i++)
+			insertion(arr[i]);
+
+		queue.add(root);
+		queueLevelNumber.add(levelNumer);
+		while (!queue.isEmpty()) {
+			Node n = queue.poll();
+
+			System.out.println(n.data);
+			System.out.println(queueLevelNumber.poll());
+			levelNumer++;
+			if (n.left != null) {
+				queueLevelNumber.add(levelNumer);
+				queue.add(n.left);
+			}
+			if (n.right != null) {
+				queue.add(n.right);
+				queueLevelNumber.add(levelNumer);
+			}
+		}
+	}
+
+	public static void insertion(int data) {
+		Node n = new Node();
+		n.data = data;
+		n.left = n.right = null;
+		if (root == null) {
+			root = n;
+			return;
+		}
+		Node j = root;
+		while (true) {
+			if (j.data > n.data) {
+				if (j.left == null) {
+					j.left = n;
+					break;
+				} else
+					j = j.left;
+
+			} else {
+				if (j.right == null) {
+					j.right = n;
+					break;
+				} else
+					j = j.right;
+			}
+		}
+
+	}
+}

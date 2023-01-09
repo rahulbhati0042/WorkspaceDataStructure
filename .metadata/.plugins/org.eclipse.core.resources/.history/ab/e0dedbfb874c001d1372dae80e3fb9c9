@@ -1,7 +1,0 @@
-package com.doublylinkedlist;
-
-public class Traverse {
-public static void main(String[] args) {
-	
-}
-}

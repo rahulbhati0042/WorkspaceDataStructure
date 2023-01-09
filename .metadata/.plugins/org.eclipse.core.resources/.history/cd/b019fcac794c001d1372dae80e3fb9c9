@@ -1,8 +1,0 @@
-package com.doublylinkedlist;
-
-public class Node {
-	int data;
-	Node next;
-
-	
-}

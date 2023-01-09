@@ -1,0 +1,25 @@
+package com.arrays.examples;
+
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
+public class SmallerNumbersThanCurrent_OptimizedApproach {
+	public static void main(String[] args) {
+		int arr[] = { 8, 1, 2, 2, 3 };
+		System.out.println(Arrays.toString(smallerNumbersThanCurrent(arr)));
+	}
+
+	public static int[] smallerNumbersThanCurrent(int[] nums) {
+		// int e = nums.length-1;
+		int smallerNum[] = nums;
+		Arrays.sort(nums);
+		Map<Integer, Integer> map = new HashMap<>();
+		
+		for (int e = nums.length - 1; e >= 0; e--) {
+			map.put(nums[e], e);
+		}
+		
+		return nums;
+	}
+}

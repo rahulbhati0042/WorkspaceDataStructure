@@ -1,0 +1,54 @@
+package com.bst;
+
+public class BST_PostOrder_Recursion {
+	static Node root;
+	public static void main(String[] args) {
+		insertion(100);
+		insertion(50);
+		insertion(25);
+		insertion(75);
+		insertion(200);
+		insertion(150);
+		insertion(175);
+		insertion(250);
+		postOrder(root);
+	
+	}
+
+	public static void postOrder(Node t) {
+		if (t == null)
+			return;
+		
+		postOrder(t.left);
+		postOrder(t.right);
+		System.out.println(t.data);
+	}
+
+	public static void insertion(int data) {
+		Node n = new Node();
+		n.data = data;
+		n.left = n.right = null;
+		if (root == null) {
+			root = n;
+			return;
+		}
+		Node j = root;
+		while (true) {
+			if (j.data > n.data) {
+				if (j.left == null) {
+					j.left = n;
+					break;
+				} else
+					j = j.left;
+
+			} else {
+				if (j.right == null) {
+					j.right = n;
+					break;
+				} else
+					j = j.right;
+			}
+		}
+
+	}
+}

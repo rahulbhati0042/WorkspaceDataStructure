@@ -14,11 +14,6 @@ public class CounterSort {
 		}
 		int tmpArr[] = new int[max + 1];
 		e = 0;
-		while (e < tmpArr.length) {
-			tmpArr[e] = 0;
-			e++;
-		}
-		e = 0;
 		while (e < arr.length) {
 			tmpArr[arr[e]]++;
 			e++;

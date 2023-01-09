@@ -1,0 +1,96 @@
+package com.bst;
+
+//Both tree are the same or not. Means hamare pas two roots ayenge,
+//vo dono same he kya ye find krna he. Structure or content bhi 
+//same hona chahiye.
+public class CheckTwoTreeAreSameOrNot {
+	static Node root1;
+	static Node root2;
+
+	public static void main(String[] args) {
+		// int arr[] = { 10, 50, 200, 25, 75, 150, 250, 4, 35, 85, 300 };
+		int tree1[] = { 10, 8, 15, 7, 9, 13, 16, 11, 14 };
+		int tree2[] = { 10, 8, 15, 7, 9, 13, 16, 11, 14 };
+		for (int i = 0; i < tree1.length; i++)
+			insertionRoot1(tree1[i]);
+		for (int i = 0; i < tree2.length; i++)
+			insertionRoot2(tree2[i]);
+
+		String str = "" + root.data;
+		path(root, str);
+
+	}
+
+	public static void path(Node t, String str) {
+		String l = str;
+		String r = str;
+		if (t.left == null && t.right == null) {
+			System.out.println(str);
+			return;
+		}
+		if (t.left != null) {
+			l = l + "->" + t.left.data;
+			path(t.left, l);
+		}
+		if (t.right != null) {
+			r = r + "->" + t.right.data;
+			path(t.right, r);
+		}
+}
+
+	public static void insertionRoot1(int data) {
+		Node n = new Node();
+		n.data = data;
+		n.left = n.right = null;
+		if (root1 == null) {
+			root1 = n;
+			return;
+		}
+		Node j = root1;
+		while (true) {
+			if (j.data > n.data) {
+				if (j.left == null) {
+					j.left = n;
+					break;
+				} else
+					j = j.left;
+
+			} else {
+				if (j.right == null) {
+					j.right = n;
+					break;
+				} else
+					j = j.right;
+			}
+		}
+
+	}
+	
+	public static void insertionRoot2(int data) {
+		Node n = new Node();
+		n.data = data;
+		n.left = n.right = null;
+		if (root2 == null) {
+			root2 = n;
+			return;
+		}
+		Node j = root2;
+		while (true) {
+			if (j.data > n.data) {
+				if (j.left == null) {
+					j.left = n;
+					break;
+				} else
+					j = j.left;
+
+			} else {
+				if (j.right == null) {
+					j.right = n;
+					break;
+				} else
+					j = j.right;
+			}
+		}
+
+	}
+}

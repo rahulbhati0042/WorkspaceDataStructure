@@ -1,0 +1,88 @@
+package com.bst;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Delete_Node {
+	static Node root;
+	static List<Node> inOrderNodes = new ArrayList<Node>();
+
+	public static void main(String[] args) {
+		int arr[] = { 100, 50, 25, 20, 10, 35, 75, 70, 60, 90, 85, 95, 200,
+				150, 175, 250, 300 };
+		for (int i = 0; i < arr.length; i++)
+			insertion(arr[i]);
+
+	}
+
+	public static void inOrder(Node t) {
+		if (t == null)
+			return;
+
+		inOrder(t.left);
+		inOrderNodes.add(t);
+		inOrder(t.right);
+	}
+
+	public static void delete(Node deleteNode) {
+		Node t = root;
+		Node parent = null;
+		while (t != null) {
+			if (t.data == deleteNode.data) {
+				//leaf node
+				if (t.left == null && t.right == null) {
+					if (t.data < parent.data)
+						t.left = null;
+					else
+						t.right = null;
+				}else if(t.right!=null){
+					Node a = t.right;
+					while(a.left!=null){
+						a = a.left;
+						
+					}
+				//	a.left = 
+				}
+				
+				break;
+			}
+			parent = t;
+			if (t.data > deleteNode.data)
+				t = t.left;
+			else
+				t = t.right;
+
+		}
+		if (t == null) {
+			System.out.println("Not found");
+		}
+	}
+
+	public static void insertion(int data) {
+		Node n = new Node();
+		n.data = data;
+		n.left = n.right = null;
+		if (root == null) {
+			root = n;
+			return;
+		}
+		Node j = root;
+		while (true) {
+			if (j.data > n.data) {
+				if (j.left == null) {
+					j.left = n;
+					break;
+				} else
+					j = j.left;
+
+			} else {
+				if (j.right == null) {
+					j.right = n;
+					break;
+				} else
+					j = j.right;
+			}
+		}
+
+	}
+}

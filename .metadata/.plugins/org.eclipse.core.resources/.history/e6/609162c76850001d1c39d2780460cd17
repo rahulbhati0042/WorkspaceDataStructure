@@ -1,0 +1,75 @@
+package com.bst;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Delete_Node {
+	static Node root;
+	static List<Node> inOrderNodes = new ArrayList<Node>();
+
+	public static void main(String[] args) {
+		int arr[] = { 100, 50, 200, 25, 75, 150, 250, 140, 175, 160, 165 };
+		for (int i = 0; i < arr.length; i++)
+			insertion(arr[i]);
+
+	}
+
+	public static void delete(Node root, int num) {
+		Node t = root;
+		Node parent = t;
+
+		while (t != null) {
+			if (t.data == num) {
+				if (t.left == null && t.right == null) {
+					if (parent.left.data == num){
+						parent.left = null;
+						t.left = parent;
+					}
+					else{
+						parent.right = null;
+						t.right = parent;
+					}
+					
+				}
+			}
+			parent = t;
+			if (t.data > num) { // left
+				t = t.left;
+			} else { // right
+				t = t.right;
+			}
+		}
+		if (t == null) {
+			System.out.println("Not found");
+		}
+
+	}
+
+	public static void insertion(int data) {
+		Node n = new Node();
+		n.data = data;
+		n.left = n.right = null;
+		if (root == null) {
+			root = n;
+			return;
+		}
+		Node j = root;
+		while (true) {
+			if (j.data > n.data) {
+				if (j.left == null) {
+					j.left = n;
+					break;
+				} else
+					j = j.left;
+
+			} else {
+				if (j.right == null) {
+					j.right = n;
+					break;
+				} else
+					j = j.right;
+			}
+		}
+
+	}
+}

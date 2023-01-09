@@ -1,0 +1,10 @@
+package com.bst;
+
+public class List_Common_Insister_LCA {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
